@@ -21,7 +21,7 @@ class ItemGridviewState extends State<ItemGridview> {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: GestureDetector(
+        child: InkWell(
             onTap: () {
               widget.listener.itemClick(widget.index);
             },

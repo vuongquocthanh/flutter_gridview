@@ -39,6 +39,7 @@ class MyGridviewState extends State<MyGridview>
   void showSnackbar(String message) {
     var snackbar = SnackBar(
       content: Text(message),
+      action: SnackBarAction(label: "Undo", onPressed: () {}),
     );
     _scaffordKey.currentState.showSnackBar(snackbar);
   }
