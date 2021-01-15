@@ -30,14 +30,14 @@ class ItemGridviewState extends State<ItemGridview> {
               child: Container(
                 width: double.infinity,
                 height: double.infinity,
-                color: Colors.orangeAccent,
+                color: updateColor(widget.index),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.directions_bike),
+                      padding: EdgeInsets.only(top:8.0, bottom: 8.0, right: 8.0),
+                      child: Icon(updateIcon(widget.index)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
@@ -47,5 +47,21 @@ class ItemGridviewState extends State<ItemGridview> {
                 ),
               ),
             )));
+  }
+  
+  IconData updateIcon(int index){
+    if(index%2==0){
+      return Icons.supervised_user_circle_sharp;
+    }else{
+      return Icons.directions_bike;
+    }
+  }
+
+  MaterialAccentColor updateColor(int index){
+    if(index%2==0){
+      return Colors.cyanAccent;
+    }else{
+      return Colors.orangeAccent;
+    }
   }
 }

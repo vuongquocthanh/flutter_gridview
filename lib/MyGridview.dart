@@ -23,8 +23,8 @@ class MyGridviewState extends State<MyGridview>
       ),
       body: GridView.count(
         padding: EdgeInsets.all(8.0),
-        crossAxisCount: 2,
-        children: List.generate(100, (index) {
+        crossAxisCount: 3,
+        children: List.generate(99, (index) {
           return ItemGridview(this, index);
         }),
       ),
