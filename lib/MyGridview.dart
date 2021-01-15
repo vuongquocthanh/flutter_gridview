@@ -33,7 +33,7 @@ class MyGridviewState extends State<MyGridview>
 
   @override
   void itemClick(int index) {
-    showSnackbar("Tap at ${index + 1} position");
+    showSnackbar("Tap at $index position");
   }
 
   void showSnackbar(String message) {
